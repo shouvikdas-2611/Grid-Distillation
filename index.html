@@ -347,6 +347,8 @@
           text-decoration:none; font-weight:600;">Video</a>
         <a href="#poster" style="font-size:0.82rem; color:var(--gd-text-muted);
           text-decoration:none; font-weight:600;">Poster</a>
+        <a href="#limitations" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Limitations</a>
         <a href="#BibTeX" style="font-size:0.82rem; color:var(--gd-text-muted);
           text-decoration:none; font-weight:600;">BibTeX</a>
       </div>
@@ -389,6 +391,14 @@
               <span class="author-block">
                 <sup>1</sup>Samsung R&amp;D Institute, Bangalore &nbsp;|&nbsp;
                 <sup>2</sup>IIIT Bangalore
+              </span>
+            </div>
+
+            <div class="is-size-6 publication-authors" style="margin-top:0.4rem;">
+              <span class="author-block" style="color:var(--gd-text-muted); font-size:0.85rem;">
+                <i class="fas fa-graduation-cap" style="margin-right:0.3rem;"></i>
+                This work is part of Biplab Ch Das's PhD research at IIIT Bangalore.
+                Project page prepared by Shouvik Das.
               </span>
             </div>
 
@@ -449,7 +459,7 @@
              style="width:100%; border-radius:8px; border:1px solid var(--gd-border);">
         <p class="teaser-caption">
           <strong>Qualitative comparison across four distillation paradigms.</strong>
-          Grid-Distil (d) is the only method achieving high interpretability,
+          Grid-Distillation (d) is the only method achieving high interpretability,
           very high information density, <em>and</em> world knowledge simultaneously &mdash;
           outperforming SRe2L, RDED, and VLCP on all representational axes.
         </p>
@@ -568,7 +578,7 @@
       <div class="gd-figure" style="margin-top:2rem; text-align:center;">
         <img src="static/images/cropping.png"
              alt="Grid-aware cropping: aligned crop vs random crop"
-             style="width:55%; border-radius:8px; border:1px solid var(--gd-border);">
+             style="width:45%; border-radius:8px; border:1px solid var(--gd-border);">
         <p class="gd-figure-caption">
           <strong>Grid-Aware Cropping.</strong> An aligned crop starts at multiples
           of (h, w), preserving the grid's semantic layout; a random crop samples
@@ -576,12 +586,13 @@
         </p>
       </div>
 
-      <div class="gd-figure" style="margin-top:2rem;">
+      <div class="gd-figure" style="margin-top:2rem; text-align:center;">
         <h3 style="font-size:1.15rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.8rem;">
           Effect of Submodular Selection
         </h3>
         <img src="static/images/submodular_effect.png"
-             alt="Random grid selection vs spectral submodular optimization">
+             alt="Random grid selection vs spectral submodular optimization"
+             style="width:55%; border-radius:8px; border:1px solid var(--gd-border);">
         <p class="gd-figure-caption">
           <strong>Left:</strong> Random selection often yields redundant sub-images
           (highlighted in red). <strong>Right:</strong> Our spectral submodular
@@ -598,87 +609,80 @@
     <div class="container is-max-desktop">
       <h2 class="gd-section-title">Datasets</h2>
       <p style="font-size:1rem; color:var(--gd-text-muted); margin-bottom:1.5rem;">
-        We evaluate on four benchmarks spanning image classification and action recognition,
-        covering both fine-grained and coarse-grained visual recognition tasks.
+        We evaluate on <strong>five benchmarks</strong> spanning image classification
+        and action recognition, covering fine-grained, coarse-grained, and large-scale
+        visual recognition tasks.
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-          gap:1.1rem;">
+      <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:0.8rem;">
 
         <div style="background:#fff; border:1.5px solid var(--gd-border);
-            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
-              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
-            Image Classification
+            border-radius:8px; padding:1rem 0.9rem; border-top:3px solid var(--gd-accent);">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">
+            Classification
           </div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.5rem;">ImageWoof</h4>
-          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
-            10 fine-grained dog breed classes from ImageNet-1K. High inter-class similarity
-            makes it the most challenging benchmark in our evaluation.
-            <br><span style="font-size:0.8rem;">~12,600 images · 256&times;256</span>
+          <h4 style="font-size:0.92rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.4rem;">ImageWoof</h4>
+          <p style="font-size:0.82rem; color:var(--gd-text-muted); line-height:1.5;">
+            10 fine-grained dog breeds. Highest inter-class similarity — most challenging.
+            <br><span style="font-size:0.75rem;">~12,600 imgs · 256&times;256</span>
           </p>
         </div>
 
         <div style="background:#fff; border:1.5px solid var(--gd-border);
-            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
-              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
-            Image Classification
+            border-radius:8px; padding:1rem 0.9rem; border-top:3px solid var(--gd-accent);">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">
+            Classification
           </div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.5rem;">ImageNette</h4>
-          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
-            10 easily distinguishable classes from ImageNet-1K with low inter-class
-            similarity. Serves as an easier classification benchmark.
-            <br><span style="font-size:0.8rem;">~12,900 images · 256&times;256</span>
+          <h4 style="font-size:0.92rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.4rem;">ImageNette</h4>
+          <p style="font-size:0.82rem; color:var(--gd-text-muted); line-height:1.5;">
+            10 easily separable ImageNet classes. Low inter-class similarity.
+            <br><span style="font-size:0.75rem;">~12,900 imgs · 256&times;256</span>
           </p>
         </div>
 
         <div style="background:#fff; border:1.5px solid var(--gd-border);
-            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
-              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
-            Image Classification
+            border-radius:8px; padding:1rem 0.9rem; border-top:3px solid var(--gd-accent);">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">
+            Classification
           </div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.5rem;">ImageIDC</h4>
-          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
-            First 10 classes of ImageNet-100. Intermediate difficulty between
-            ImageNette and ImageWoof, used for broader generalization testing.
-            <br><span style="font-size:0.8rem;">~13,000 images · 256&times;256</span>
+          <h4 style="font-size:0.92rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.4rem;">ImageIDC</h4>
+          <p style="font-size:0.82rem; color:var(--gd-text-muted); line-height:1.5;">
+            First 10 classes of ImageNet-100. Intermediate difficulty.
+            <br><span style="font-size:0.75rem;">~13,000 imgs · 256&times;256</span>
           </p>
         </div>
 
         <div style="background:#fff; border:1.5px solid var(--gd-border);
-           border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
-          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
-              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
-            Image Classification
+            border-radius:8px; padding:1rem 0.9rem; border-top:3px solid var(--gd-accent);">
+          <div style="font-size:0.7rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">
+            Classification
           </div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.5rem;">ImageNet-1K</h4>
-          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
-            Full-scale ImageNet with 1,000 classes — the most challenging and
-            semantically diverse benchmark. Evaluated at IPC=10 following the
-            RDED protocol with ResNet-18 backbone.
-            <br><span style="font-size:0.8rem;">1,000 classes · ~1.28M images · 224&times;224</span>
+          <h4 style="font-size:0.92rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.4rem;">ImageNet-1K</h4>
+          <p style="font-size:0.82rem; color:var(--gd-text-muted); line-height:1.5;">
+            Full-scale 1K-class benchmark. RDED protocol, ResNet-18.
+            <br><span style="font-size:0.75rem;">~1.28M imgs · 224&times;224</span>
           </p>
         </div>
 
         <div style="background:#fff; border:1.5px solid var(--gd-border);
-            border-radius:10px; padding:1.3rem; border-top:4px solid #e67e22;">
-          <div style="font-size:0.75rem; font-weight:700; color:#e67e22;
-              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
-            Action Recognition
+            border-radius:8px; padding:1rem 0.9rem; border-top:3px solid #e67e22;">
+          <div style="font-size:0.7rem; font-weight:700; color:#e67e22;
+              text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;">
+            Action Recog.
           </div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.5rem;">UCF-101 MidFrames</h4>
-          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
-            Middle frames extracted from UCF-101 video clips across 101 action
-            categories. Evaluated under few-shot classification (1/2/4/8-shot)
-            following the LDC protocol.
-            <br><span style="font-size:0.8rem;">101 classes · ResNet-50 · 256&times;256</span>
+          <h4 style="font-size:0.92rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.4rem;">UCF-101</h4>
+          <p style="font-size:0.82rem; color:var(--gd-text-muted); line-height:1.5;">
+            Mid-frames from 101 action classes. Few-shot (1/2/4/8-shot), LDC protocol.
+            <br><span style="font-size:0.75rem;">101 classes · ResNet-50</span>
           </p>
         </div>
 
@@ -691,7 +695,7 @@
     <div class="container is-max-desktop">
       <h2 class="gd-section-title">Results</h2>
       <p style="font-size:1rem; color:var(--gd-text-muted); margin-bottom:1.5rem;">
-        Grid-Distil consistently achieves state-of-the-art performance across all benchmarks,
+        Grid-Distillation consistently achieves state-of-the-art performance across all benchmarks,
         architectures, and IPC regimes &mdash; with especially large gains in the low-data setting.
       </p>
 
@@ -730,12 +734,12 @@
 
       <!-- Compact comparison table -->
       <div style="margin-top:2rem; overflow-x:auto;">
-        <h4 style="font-size:1.05rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.8rem;">
+        <h4 style="font-size:1.05rem; font-weight:700; color:var(--gd-accent); margin-bottom:0.8rem;">
           ImageWoof Comparison · ResNet-18
         </h4>
         <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
           <thead>
-            <tr style="background:var(--gd-primary); color:#fff;">
+            <tr style="background:var(--gd-accent); color:#fff;">
               <th style="padding:0.6rem 1rem; text-align:left;">Method</th>
               <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=10</th>
               <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=20</th>
@@ -811,7 +815,7 @@
         </p>
         <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
           <thead>
-            <tr style="background:var(--gd-primary); color:#fff;">
+            <tr style="background:var(--gd-accent); color:#fff;">
               <th style="padding:0.6rem 1rem; text-align:left;">Dataset</th>
               <th colspan="3" style="padding:0.6rem 0.8rem; text-align:center;
                   border-right:2px solid rgba(255,255,255,0.3);">
@@ -821,7 +825,7 @@
                 Diffusion Enhancement (Ours)
               </th>
             </tr>
-            <tr style="background:#154360; color:#cce4f7; font-size:0.8rem;">
+            <tr style="background:#d6eaf8; color:var(--gd-primary); font-size:0.8rem;">
               <th style="padding:0.4rem 1rem;"></th>
               <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 10</th>
               <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 20</th>
@@ -880,9 +884,20 @@
       <div class="ablation-box">
         <h4>Key Ablation Findings</h4>
         <ul>
-          <li><strong>Coverage (&alpha;) dominates</strong> &mdash; the most important term in the SSDIM objective; setting &alpha;=1.0 alone achieves 78.2% on ImageWoof vs 74.6% random baseline.</li>
-          <li><strong>Diffusion enhancement adds +14.6 pp</strong> on ImageNet-1K (50.0% vs 35.4% bilinear), showing the value of recovering high-frequency spatial details.</li>
-          <li><strong>Semantic prompts help</strong> &mdash; adding action labels in UCF-101 (Grid-LDC-Labels) gives consistent gains across all 1/2/4/8-shot regimes.</li>
+          <li><strong>Coverage (&alpha;) dominates</strong> &mdash; the most critical term;
+              &alpha;=1.0 alone achieves 78.2% on ImageWoof vs 74.6% random baseline.
+              Ensures every class image is represented by at least one selected exemplar.</li>
+          <li><strong>Diversity (&beta;) complements coverage</strong> &mdash; the &beta;-dominant
+              setting (&alpha;=1.0, &beta;=0.6, &gamma;=0.3) achieves the best overall score of
+              <strong>78.6%</strong>, confirming that DPP-based spread in feature space
+              avoids redundant exemplar selection.</li>
+          <li><strong>Spectral term (&gamma;) acts as a tiebreaker</strong> &mdash; biasing
+              toward high eigen-energy images helps capture dominant manifold modes, but
+              contributes most when combined with &alpha; and &beta; rather than alone
+              (&gamma;-only: 75.8% vs random: 74.6%).</li>
+          <li><strong>Diffusion enhancement adds +14.6 pp</strong> on ImageNet-1K
+              (50.0% vs 35.4% bilinear), recovering high-frequency spatial details
+              lost during downsampling.</li>
         </ul>
       </div>
 
@@ -914,10 +929,6 @@
             <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">p = 0.6</div>
             <div style="font-size:0.78rem; color:var(--gd-text-muted);">Aligned crop prob.</div>
           </div>
-          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
-            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">r = 32</div>
-            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Spectral rank</div>
-          </div>
         </div>
       </div>
 
@@ -929,54 +940,43 @@
     <div class="container is-max-desktop">
       <h2 class="gd-section-title">Limitations &amp; Broader Impact</h2>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:0.5rem;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:0.8rem;">
 
-        <div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.8rem;">
+        <div style="background:#fff8f3; border:1.5px solid #f0c199;
+            border-radius:8px; padding:1.1rem 1.2rem; border-top:3px solid #e67e22;">
+          <h4 style="font-size:0.88rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.6rem;">
             <i class="fas fa-exclamation-triangle"
-              style="color:#e67e22; margin-right:0.4rem;"></i>Limitations
+              style="color:#e67e22; margin-right:0.3rem;"></i>Limitations
           </h4>
-          <ul style="font-size:0.92rem; color:var(--gd-text-muted);
-              line-height:1.8; padding-left:1.2rem; margin:0;">
-            <li>SSDIM requires a pretrained CLIP encoder — performance may degrade on
-                highly domain-specific datasets where CLIP embeddings are less informative.</li>
-            <li>The single-step diffusion enhancement adds a one-time preprocessing cost
-                (~918ms per image on A6000) that may be prohibitive at very large scales.</li>
-            <li>Grid size is fixed at L=4 — optimal grid size may vary across datasets
-                with different intra-class diversity characteristics.</li>
-            <li>Current evaluation focuses on image classification and action recognition;
-                generalization to detection or segmentation tasks remains unexplored.</li>
+          <ul style="font-size:0.82rem; color:var(--gd-text-muted);
+              line-height:1.65; padding-left:1rem; margin:0;">
+            <li>Requires pretrained CLIP — may degrade on domain-specific datasets.</li>
+            <li>Diffusion enhancement adds ~918ms per image preprocessing cost.</li>
+            <li>Grid size fixed at L=4 — may not be optimal for all datasets.</li>
+            <li>Generalization to detection/segmentation tasks unexplored.</li>
           </ul>
         </div>
 
-        <div>
-          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
-              margin-bottom:0.8rem;">
+        <div style="background:#f0f7ff; border:1.5px solid #aed4f0;
+            border-radius:8px; padding:1.1rem 1.2rem; border-top:3px solid var(--gd-accent);">
+          <h4 style="font-size:0.88rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.6rem;">
             <i class="fas fa-globe"
-              style="color:var(--gd-accent); margin-right:0.4rem;"></i>Broader Impact
+              style="color:var(--gd-accent); margin-right:0.3rem;"></i>Broader Impact
           </h4>
-          <ul style="font-size:0.92rem; color:var(--gd-text-muted);
-              line-height:1.8; padding-left:1.2rem; margin:0;">
-            <li><strong style="color:var(--gd-text);">Efficiency:</strong> Compact distilled
-                datasets reduce storage, compute, and energy costs for model training —
-                supporting sustainable AI development.</li>
-            <li><strong style="color:var(--gd-text);">Privacy:</strong> Distilled surrogates
-                enable model training without direct access to raw data, benefiting
-                privacy-sensitive domains like healthcare.</li>
-            <li><strong style="color:var(--gd-text);">Accessibility:</strong> Lower data
-                requirements democratize model training for researchers without large
-                compute budgets.</li>
-            <li><strong style="color:var(--gd-text);">Risk:</strong> As with all dataset
-                compression methods, distilled data may inherit or amplify biases present
-                in the original dataset.</li>
+          <ul style="font-size:0.82rem; color:var(--gd-text-muted);
+              line-height:1.65; padding-left:1rem; margin:0;">
+            <li><strong style="color:var(--gd-text);">Efficiency:</strong> Reduces storage, compute and energy for training.</li>
+            <li><strong style="color:var(--gd-text);">Privacy:</strong> Enables training without raw data access.</li>
+            <li><strong style="color:var(--gd-text);">Accessibility:</strong> Democratizes model training for low-resource researchers.</li>
+            <li><strong style="color:var(--gd-text);">Risk:</strong> May inherit or amplify biases from source datasets.</li>
           </ul>
         </div>
 
       </div>
     </div>
   </section>
-
 
   <!-- ═══════════════ VIDEO ═══════════════ -->
   <section class="section" id="video">
