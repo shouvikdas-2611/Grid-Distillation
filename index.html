@@ -3,518 +3,1050 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="PAPER_TITLE - AUTHOR_NAMES">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="title" content="Grid Distillation - CVPR 2026">
+  <meta name="description" content="Grid Distillation: a generative dataset distillation framework that compresses large-scale datasets into structured compositional grids using spectral submodular optimization and single-step diffusion priors. CVPR 2026.">
+  <meta name="keywords" content="dataset distillation, grid distillation, submodular optimization, diffusion models, CLIP, image classification, CVPR 2026, computer vision">
+  <meta name="author" content="Biplab Ch Das, Shouvik Das, Viswanath Gopalakrishnan">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta property="og:site_name" content="Samsung R&D Institute Bangalore / IIIT Bangalore">
+  <meta property="og:title" content="Grid Distillation: Compositional Image Distillation via Structured Generative Grids">
+  <meta property="og:description" content="A generative dataset distillation framework using CLIP-guided spectral submodular grids and single-step diffusion reconstruction. CVPR 2026.">
+  <meta property="og:url" content="https://shouvikdas-2611.github.io/Grid-Distillation/">
+  <meta property="og:image" content="https://shouvikdas-2611.github.io/Grid-Distillation/static/images/teaser.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
+  <meta property="og:image:alt" content="Grid Distillation - Qualitative Comparison">
+  <meta property="article:published_time" content="2026-06-01T00:00:00.000Z">
+  <meta property="article:author" content="Biplab Ch Das">
   <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
+  <meta property="article:tag" content="dataset distillation">
+  <meta property="article:tag" content="computer vision">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="twitter:title" content="Grid Distillation: Compositional Image Distillation via Structured Generative Grids">
+  <meta name="twitter:description" content="CLIP-guided spectral submodular grids + single-step diffusion for dataset distillation. CVPR 2026.">
+  <meta name="twitter:image" content="https://shouvikdas-2611.github.io/Grid-Distillation/static/images/teaser.png">
+  <meta name="twitter:image:alt" content="Grid Distillation - Research Preview">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
+  <meta name="citation_title" content="Grid Distillation: Compositional Image Distillation via Structured Generative Grids">
+  <meta name="citation_author" content="Das, Biplab Ch">
+  <meta name="citation_author" content="Das, Shouvik">
+  <meta name="citation_author" content="Gopalakrishnan, Viswanath">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)">
+  <meta name="citation_pdf_url" content="https://shouvikdas-2611.github.io/Grid-Distillation/static/pdfs/paper.pdf">
+
   <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="theme-color" content="#1a5276">
+  <meta name="msapplication-TileColor" content="#1a5276">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
+  <title>Grid Distillation | CVPR 2026</title>
 
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
-  
-  <!-- Favicon and App Icons -->
+  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
+
+  <!-- Critical CSS -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Non-critical CSS -->
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
   <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
-  <!-- Fonts - Optimized loading -->
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "headline": "Grid Distillation: Compositional Image Distillation via Structured Generative Grids",
+    "description": "A generative dataset distillation framework that compresses large-scale datasets into structured compositional grids using spectral submodular optimization and single-step diffusion priors.",
     "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
+      {"@type": "Person", "name": "Biplab Ch Das", "affiliation": [{"@type": "Organization", "name": "Samsung R&D Institute Bangalore"}, {"@type": "Organization", "name": "IIIT Bangalore"}]},
+      {"@type": "Person", "name": "Shouvik Das", "affiliation": {"@type": "Organization", "name": "Samsung R&D Institute Bangalore"}},
+      {"@type": "Person", "name": "Viswanath Gopalakrishnan", "affiliation": {"@type": "Organization", "name": "IIIT Bangalore"}}
     ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
+    "datePublished": "2026-06-01",
+    "publisher": {"@type": "Organization", "name": "IEEE/CVF Conference on Computer Vision and Pattern Recognition"},
+    "url": "https://shouvikdas-2611.github.io/Grid-Distillation/",
+    "image": "https://shouvikdas-2611.github.io/Grid-Distillation/static/images/teaser.png",
+    "keywords": ["dataset distillation", "submodular optimization", "diffusion models", "CLIP", "computer vision"],
+    "isAccessibleForFree": true
   }
   </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
+
+  <!-- Custom Styles for Grid Distillation -->
+  <style>
+    :root {
+      --gd-primary: #1a5276;
+      --gd-accent: #2e86c1;
+      --gd-accent-light: #d6eaf8;
+      --gd-bg-light: #f8f9fa;
+      --gd-border: #e0e0e0;
+      --gd-text: #2c3e50;
+      --gd-text-muted: #5a6c7d;
+    }
+
+    .conference-badge {
+      display: inline-block;
+      background: var(--gd-accent);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      padding: 0.3rem 1.1rem;
+      border-radius: 20px;
+      margin-bottom: 0.8rem;
+    }
+
+    .or-pill {
+      display: inline-block;
+      background: var(--gd-accent-light);
+      color: var(--gd-accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      border: 1.5px solid var(--gd-accent);
+      text-decoration: none;
+      margin-top: 0.6rem;
+      transition: all 0.2s;
+    }
+    .or-pill:hover { background: var(--gd-accent); color: #fff; }
+
+    .teaser-caption {
+      font-size: 0.92rem;
+      color: var(--gd-text-muted);
+      text-align: center;
+      margin-top: 1rem;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .abstract-box {
+      background: var(--gd-accent-light);
+      border-left: 4px solid var(--gd-accent);
+      padding: 1.5rem 1.8rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--gd-text);
+    }
+
+    .gd-section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gd-primary);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--gd-accent-light);
+      display: inline-block;
+    }
+
+    .method-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .method-card {
+      background: #ffffff;
+      border: 1.5px solid var(--gd-border);
+      border-radius: 10px;
+      padding: 1.4rem 1.3rem;
+      border-top: 4px solid var(--gd-accent);
+    }
+    .method-card .step-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gd-accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.4rem;
+    }
+    .method-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gd-primary);
+      margin-bottom: 0.5rem;
+    }
+    .method-card p {
+      font-size: 0.9rem;
+      color: var(--gd-text-muted);
+      line-height: 1.65;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .result-card {
+      background: #fff;
+      border: 1.5px solid var(--gd-border);
+      border-radius: 10px;
+      padding: 1.3rem 0.8rem;
+      text-align: center;
+      border-top: 4px solid var(--gd-accent);
+    }
+    .result-number {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--gd-primary);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .result-delta {
+      display: inline-block;
+      background: #e8f5e9;
+      color: #2e7d32;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.15rem 0.55rem;
+      border-radius: 12px;
+      margin-bottom: 0.5rem;
+    }
+    .result-label {
+      font-size: 0.8rem;
+      color: var(--gd-text-muted);
+      line-height: 1.4;
+    }
+
+    .gd-figure {
+      margin: 1.8rem 0;
+    }
+    .gd-figure img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--gd-border);
+    }
+    .gd-figure-caption {
+      font-size: 0.88rem;
+      color: var(--gd-text-muted);
+      margin-top: 0.6rem;
+      line-height: 1.55;
+    }
+
+    .ablation-box {
+      background: var(--gd-accent-light);
+      border-radius: 10px;
+      padding: 1.5rem 1.8rem;
+      margin-top: 2rem;
+    }
+    .ablation-box h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gd-primary);
+      margin-bottom: 0.7rem;
+    }
+    .ablation-box ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .ablation-box li {
+      font-size: 0.92rem;
+      color: var(--gd-text);
+      line-height: 1.8;
+      margin-bottom: 0.3rem;
+    }
+
+    .gd-video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      border: 1px solid var(--gd-border);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .poster-preview img {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 8px;
+      border: 1px solid var(--gd-border);
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: block;
+      margin: 0 auto;
+    }
+    .poster-preview img:hover { transform: scale(1.01); }
+
+    #BibTeX pre {
+      background: #f4f4f4;
+      border: 1px solid var(--gd-border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      overflow-x: auto;
+    }
+
+    .btn-disabled-custom {
+      opacity: 0.55;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .result-number { font-size: 1.8rem; }
+      .method-cards { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
 
+  <!-- ═══════════════ STICKY NAV ═══════════════ -->
+  <nav style="position:sticky; top:0; z-index:100;
+      background:rgba(255,255,255,0.97); backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--gd-border); padding:0.6rem 1.5rem;">
+    <div style="max-width:960px; margin:0 auto;
+        display:flex; align-items:center; justify-content:space-between;">
+      <span style="font-weight:700; color:var(--gd-primary);
+            font-size:0.88rem;">Grid Distillation · CVPR 2026</span>
+      <div style="display:flex; gap:1.4rem; flex-wrap:wrap;">
+        <a href="#abstract" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Abstract</a>
+        <a href="#method" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Method</a>
+        <a href="#datasets" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Datasets</a>
+        <a href="#results" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Results</a>
+        <a href="#video" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Video</a>
+        <a href="#poster" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">Poster</a>
+        <a href="#BibTeX" style="font-size:0.82rem; color:var(--gd-text-muted);
+          text-decoration:none; font-weight:600;">BibTeX</a>
+      </div>
+    </div>
+  </nav>
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <main id="main-content">
+
+  <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+
+            <span class="conference-badge">CVPR 2026 &middot; Denver, COLORADO</span>
+
+            <h1 class="title is-1 publication-title" style="color:var(--gd-primary);">
+              Grid Distillation: Compositional Image Distillation
+              via Structured Generative Grids
+            </h1>
+
             <div class="is-size-5 publication-authors">
-              <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
+                <a href="mailto:biplab.das@iiitb.ac.in" target="_blank">Biplab Ch Das</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:shouvik.das@samsung.com" target="_blank">Shouvik Das</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="mailto:viswanath.g@iiitb.ac.in" target="_blank">Viswanath Gopalakrishnan</a><sup>2</sup>
+              </span>
+            </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- TODO: Replace with your institution and conference/journal info -->
-                    <span class="author-block">Institution Name<br>Conference name and year</span>
-                    <!-- TODO: Remove this line if no equal contribution -->
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>Samsung R&amp;D Institute, Bangalore &nbsp;|&nbsp;
+                <sup>2</sup>IIIT Bangalore
+              </span>
+            </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
+                <span class="link-block">
+                  <a href="static/pdfs/paper.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
+                  <a href="static/pdfs/poster.pdf" target="_blank"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                    <span>Poster</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="#video"
+                     class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-video"></i></span>
+                    <span>Video</span>
+                  </a>
+                </span>
+
+                <span class="link-block" style="vertical-align:middle;">
+                  <a class="external-link button is-normal is-rounded is-dark btn-disabled-custom"
+                     style="vertical-align:middle;">
+                    <span class="icon"><i class="fab fa-github"></i></span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+
+              </div>
+
+              <a href="https://openreview.net/forum?id=vUHnPazM2j" class="or-pill" target="_blank">
+                OpenReview: vUHnPazM2j
+              </a>
+
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
-        </div>
+  <!-- ═══════════════ TEASER ═══════════════ -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/teaser.png"
+             alt="Qualitative comparison of SRe2L, RDED, VLCP, and Grid-Distil"
+             style="width:100%; border-radius:8px; border:1px solid var(--gd-border);">
+        <p class="teaser-caption">
+          <strong>Qualitative comparison across four distillation paradigms.</strong>
+          Grid-Distil (d) is the only method achieving high interpretability,
+          very high information density, <em>and</em> world knowledge simultaneously &mdash;
+          outperforming SRe2L, RDED, and VLCP on all representational axes.
+        </p>
       </div>
     </div>
-  </div>
-</section>
-<!-- End paper abstract -->
+  </section>
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
+  <!-- ═══════════════ ABSTRACT ═══════════════ -->
+  <section class="section hero is-light" id="abstract">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
         <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <h2 class="gd-section-title">Abstract</h2>
+          <div class="abstract-box">
+            <p>
+              We present <strong>Grid Distillation</strong>, a generative dataset distillation
+              framework that compresses large-scale datasets into a compact set of informative
+              synthetic samples. Our method constructs high-resolution compositional grids via
+              <strong>spectral submodular optimization</strong>, which injects world knowledge from
+              CLIP representations to maximize semantic coverage and diversity. These grids are then
+              downsampled into low-resolution distilled images optimized for diversity and
+              representational efficiency. During training, a <strong>single-step diffusion
+              reconstruction</strong> (based on Stable Diffusion Turbo) restores fine-grained spatial
+              details from diffusion priors, bridging the gap between compact representations and
+              natural image statistics. A <strong>grid-aware cropping strategy</strong> further enhances
+              discriminability by probabilistically aligning crops with grid boundaries, maintaining
+              compatibility with standard 224&times;224 inference inputs. Experiments on ImageWoof,
+              ImageNette, ImageIDC, and ImageNet-1K demonstrate consistent improvements over existing
+              dataset distillation methods across multiple IPC settings.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+  </section>
 
+  <!-- ═══════════════ METHOD ═══════════════ -->
+  <section class="section" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="gd-section-title">Method</h2>
+      <p style="font-size:1rem; color:var(--gd-text-muted); margin-bottom:1.5rem;">
+        Grid Distillation operates in three stages: principled submodular selection of
+        exemplars, single-step diffusion-based detail recovery, and a grid-aware cropping
+        strategy that preserves compositional structure at training time.
+      </p>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+      <div class="gd-figure">
+        <img src="static/images/pipeline.png"
+             alt="Spectral-submodular grid distillation pipeline">
+        <p class="gd-figure-caption">
+          <strong>Pipeline overview.</strong> Starting from a pool of class images, we
+          (1) extract normalized CLIP embeddings, (2) build an affinity kernel and compute
+          spectral decomposition to obtain per-sample energy scores, and (3) solve the SSDIM
+          submodular optimization to select L&sup2; exemplars, which are downsampled and
+          enhanced via single-step diffusion for downstream classification.
+        </p>
+      </div>
+
+      <div class="method-cards">
+        <div class="method-card">
+          <div class="step-label">Stage 1 &middot; Selection</div>
+          <h4>Spectral Submodular Grid Selection (SSDIM)</h4>
+          <p>
+            Frames grid construction as a principled submodular optimization over CLIP
+            embeddings &mdash; jointly maximizing coverage (facility-location), diversity
+            (log-det DPP), and spectral informativeness. Selects 16 exemplars (L=4 grid)
+            that maximally span the class manifold. Runtime: ~9&ndash;70s for 100&ndash;1K images.
+          </p>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
+        <div class="method-card">
+          <div class="step-label">Stage 2 &middot; Enhancement</div>
+          <h4>Single-Step Diffusion Detail Reconstruction</h4>
+          <p>
+            Adapts InvSR's diffusion inversion to restore fine-grained spatial textures
+            lost during downsampling. Uses Stable Diffusion Turbo with class-conditioned
+            prompts for semantically faithful grid reconstruction in ~148ms per image.
+            Adds only +16.9% one-time overhead over full training.
+          </p>
         </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+        <div class="method-card">
+          <div class="step-label">Stage 3 &middot; Training</div>
+          <h4>Grid-Aware Cropping Strategy</h4>
+          <p>
+            A probabilistic crop transform mixing grid-aligned crops (p=0.6, preserving
+            semantic layout) with random crops (p=0.4, adding local variation). Maintains
+            full compatibility with standard 224&times;224 inference &mdash; no changes to the
+            downstream pipeline.
+          </p>
         </div>
       </div>
+
+      <!-- SSDIM Objective — add after method-cards -->
+      <div style="background:#f8f9fa; border:1.5px solid var(--gd-border);
+          border-left:4px solid var(--gd-accent); border-radius:0 8px 8px 0;
+          padding:1.4rem 1.8rem; margin-top:2rem;">
+        <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.6rem;">
+          SSDIM Optimization Objective
+        </h4>
+        <p style="font-family:Georgia,serif; font-size:1rem; color:var(--gd-text);
+          line-height:2; margin-bottom:0.8rem;">
+          <strong>F(S)</strong> = &alpha; &sum;<sub>i&isin;U</sub> max<sub>j&isin;S</sub> K<sub>ij</sub>
+          &nbsp;+&nbsp; &beta; log det(<strong>K</strong><sub>S,S</sub> + &epsilon;<strong>I</strong>)
+          &nbsp;+&nbsp; &gamma; &sum;<sub>i&isin;S</sub> s<sub>i</sub>
+        </p>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem;
+            font-size:0.88rem; color:var(--gd-text-muted);">
+          <div><strong style="color:var(--gd-primary);">Coverage (&alpha;)</strong><br>
+          Every image represented by at least one exemplar — facility location.</div>
+          <div><strong style="color:var(--gd-primary);">Diversity (&beta;)</strong><br>
+          Selected embeddings span large feature volume — log-det DPP term.</div>
+          <div><strong style="color:var(--gd-primary);">Spectral (&gamma;)</strong><br>
+          Bias toward high eigen-energy images on dominant manifold modes.</div>
+        </div>
+      </div>
+
+      <div class="gd-figure" style="margin-top:2rem; text-align:center;">
+        <img src="static/images/cropping.png"
+             alt="Grid-aware cropping: aligned crop vs random crop"
+             style="width:55%; border-radius:8px; border:1px solid var(--gd-border);">
+        <p class="gd-figure-caption">
+          <strong>Grid-Aware Cropping.</strong> An aligned crop starts at multiples
+          of (h, w), preserving the grid's semantic layout; a random crop samples
+          arbitrary offsets, adding local variation for robustness.
+        </p>
+      </div>
+
+      <div class="gd-figure" style="margin-top:2rem;">
+        <h3 style="font-size:1.15rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.8rem;">
+          Effect of Submodular Selection
+        </h3>
+        <img src="static/images/submodular_effect.png"
+             alt="Random grid selection vs spectral submodular optimization">
+        <p class="gd-figure-caption">
+          <strong>Left:</strong> Random selection often yields redundant sub-images
+          (highlighted in red). <strong>Right:</strong> Our spectral submodular
+          optimization produces semantically diverse and spatially complementary grids,
+          improving coverage and diversity over naive random sampling.
+        </p>
+      </div>
+
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  </section>
 
+  <!-- ═══════════════ DATASETS ═══════════════ -->
+  <section class="section hero is-light" id="datasets">
+    <div class="container is-max-desktop">
+      <h2 class="gd-section-title">Datasets</h2>
+      <p style="font-size:1rem; color:var(--gd-text-muted); margin-bottom:1.5rem;">
+        We evaluate on four benchmarks spanning image classification and action recognition,
+        covering both fine-grained and coarse-grained visual recognition tasks.
+      </p>
 
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+          gap:1.1rem;">
 
+        <div style="background:#fff; border:1.5px solid var(--gd-border);
+            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
+            Image Classification
+          </div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.5rem;">ImageWoof</h4>
+          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
+            10 fine-grained dog breed classes from ImageNet-1K. High inter-class similarity
+            makes it the most challenging benchmark in our evaluation.
+            <br><span style="font-size:0.8rem;">~12,600 images · 256&times;256</span>
+          </p>
+        </div>
 
+        <div style="background:#fff; border:1.5px solid var(--gd-border);
+            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
+            Image Classification
+          </div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.5rem;">ImageNette</h4>
+          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
+            10 easily distinguishable classes from ImageNet-1K with low inter-class
+            similarity. Serves as an easier classification benchmark.
+            <br><span style="font-size:0.8rem;">~12,900 images · 256&times;256</span>
+          </p>
+        </div>
 
+        <div style="background:#fff; border:1.5px solid var(--gd-border);
+            border-radius:10px; padding:1.3rem; border-top:4px solid var(--gd-accent);">
+          <div style="font-size:0.75rem; font-weight:700; color:var(--gd-accent);
+              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
+            Image Classification
+          </div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.5rem;">ImageIDC</h4>
+          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
+            First 10 classes of ImageNet-100. Intermediate difficulty between
+            ImageNette and ImageWoof, used for broader generalization testing.
+            <br><span style="font-size:0.8rem;">~13,000 images · 256&times;256</span>
+          </p>
+        </div>
 
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+        <div style="background:#fff; border:1.5px solid var(--gd-border);
+            border-radius:10px; padding:1.3rem; border-top:4px solid #e67e22;">
+          <div style="font-size:0.75rem; font-weight:700; color:#e67e22;
+              text-transform:uppercase; letter-spacing:1.5px; margin-bottom:0.4rem;">
+            Action Recognition
+          </div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.5rem;">UCF-101 MidFrames</h4>
+          <p style="font-size:0.88rem; color:var(--gd-text-muted); line-height:1.6;">
+            Middle frames extracted from UCF-101 video clips across 101 action
+            categories. Evaluated under few-shot classification (1/2/4/8-shot)
+            following the LDC protocol.
+            <br><span style="font-size:0.8rem;">101 classes · ResNet-50 · 256&times;256</span>
+          </p>
+        </div>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
       </div>
     </div>
   </section>
-<!--End paper poster -->
+
+  <!-- ═══════════════ RESULTS ═══════════════ -->
+  <section class="section hero is-light" id="results">
+    <div class="container is-max-desktop">
+      <h2 class="gd-section-title">Results</h2>
+      <p style="font-size:1rem; color:var(--gd-text-muted); margin-bottom:1.5rem;">
+        Grid-Distil consistently achieves state-of-the-art performance across all benchmarks,
+        architectures, and IPC regimes &mdash; with especially large gains in the low-data setting.
+      </p>
+
+      <div class="result-grid">
+        <div class="result-card">
+          <div class="result-number">65.5%</div>
+          <span class="result-delta">+25.6 pts over VLCP</span>
+          <p class="result-label">ImageWoof &middot; IPC=10<br>ResNet-18</p>
+        </div>
+        <div class="result-card">
+          <div class="result-number">83.3%</div>
+          <span class="result-delta">+18.5 pts over VLCP</span>
+          <p class="result-label">ImageNette &middot; IPC=10<br>ResNetAP-10</p>
+        </div>
+        <div class="result-card">
+          <div class="result-number">84.3%</div>
+          <span class="result-delta">+25.4 pts over VLCP</span>
+          <p class="result-label">ImageWoof &middot; IPC=50<br>ResNet-18</p>
+        </div>
+        <div class="result-card">
+          <div class="result-number">50.0%</div>
+          <span class="result-delta">+3.3 pts over VLCP</span>
+          <p class="result-label">ImageNet-1K &middot; IPC=10<br>ResNet-18</p>
+        </div>
+        <div class="result-card">
+          <div class="result-number">73.9%</div>
+          <span class="result-delta">+7.1 pts over LDC</span>
+          <p class="result-label">UCF-101 &middot; 1-shot<br>ResNet-50</p>
+        </div>
+      </div>
+
+      <p style="font-size:0.88rem; color:var(--gd-text-muted); margin-top:1.2rem; text-align:center;">
+        Full comparison tables (ImageWoof, ImageNette, ImageIDC, ImageNet-1K, UCF-101) are in
+        <a href="static/pdfs/paper.pdf" style="color:var(--gd-accent);" target="_blank">the paper</a>.
+      </p>
+
+      <!-- Compact comparison table -->
+      <div style="margin-top:2rem; overflow-x:auto;">
+        <h4 style="font-size:1.05rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.8rem;">
+          ImageWoof Comparison · ResNet-18
+        </h4>
+        <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+          <thead>
+            <tr style="background:var(--gd-primary); color:#fff;">
+              <th style="padding:0.6rem 1rem; text-align:left;">Method</th>
+              <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=10</th>
+              <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=20</th>
+              <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=50</th>
+              <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=70</th>
+              <th style="padding:0.6rem 0.8rem; text-align:center;">IPC=100</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--gd-border);">
+              <td style="padding:0.55rem 1rem;">Herding</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">30.2</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">32.2</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">48.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">49.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">59.3</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gd-border); background:#fafafa;">
+              <td style="padding:0.55rem 1rem;">Minimax</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">35.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">41.8</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">53.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">56.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">62.7</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gd-border);">
+              <td style="padding:0.55rem 1rem;">D<sup>4</sup>M</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">32.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">38.4</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">53.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">56.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">63.8</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gd-border); background:#fafafa;">
+              <td style="padding:0.55rem 1rem;">
+                VLCP <span style="font-size:0.75rem; color:var(--gd-text-muted);">(prev. SOTA)</span>
+              </td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">39.9</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">44.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">58.9</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">60.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">68.3</td>
+            </tr>
+            <tr style="background:var(--gd-accent-light); font-weight:700;">
+              <td style="padding:0.55rem 1rem; color:var(--gd-primary);">
+                Grid-Distil <span style="font-weight:400; font-size:0.82rem;">(Ours)</span>
+              </td>
+              <td style="padding:0.55rem 0.8rem; text-align:center; color:var(--gd-primary);">65.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center; color:var(--gd-primary);">75.2</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center; color:var(--gd-primary);">84.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center; color:var(--gd-primary);">85.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center; color:var(--gd-primary);">85.9</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.78rem; color:var(--gd-text-muted); margin-top:0.4rem;">
+          All results at 256&times;256 · ResNet-18 backbone · Best results in bold in the paper.
+          Full table with all architectures (ConvNet-6, ResNetAP-10, ResNet-18) in
+          <a href="static/pdfs/paper.pdf" style="color:var(--gd-accent);" target="_blank">the paper</a>.
+        </p>
+      </div>
 
 
+      <!-- Diffusion vs Bilinear Table -->
+      <div style="margin-top:2rem; overflow-x:auto;">
+        <h4 style="font-size:1.05rem; font-weight:700;
+            color:var(--gd-primary); margin-bottom:0.4rem;">
+          Detail Enhancement: Diffusion vs. Bilinear · ResNetAP-10
+        </h4>
+        <p style="font-size:0.85rem; color:var(--gd-text-muted); margin-bottom:0.8rem;">
+          Single-step diffusion reconstruction consistently outperforms naive bilinear
+          upsampling, especially on fine-grained datasets.
+        </p>
+        <table style="width:100%; border-collapse:collapse; font-size:0.88rem;">
+          <thead>
+            <tr style="background:var(--gd-primary); color:#fff;">
+              <th style="padding:0.6rem 1rem; text-align:left;">Dataset</th>
+              <th colspan="3" style="padding:0.6rem 0.8rem; text-align:center;
+                  border-right:2px solid rgba(255,255,255,0.3);">
+                Bilinear Upsampling
+              </th>
+              <th colspan="3" style="padding:0.6rem 0.8rem; text-align:center;">
+                Diffusion Enhancement (Ours)
+              </th>
+            </tr>
+            <tr style="background:#154360; color:#cce4f7; font-size:0.8rem;">
+              <th style="padding:0.4rem 1rem;"></th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 10</th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 20</th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;
+                  border-right:2px solid rgba(255,255,255,0.2);">IPC 50</th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 10</th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 20</th>
+              <th style="padding:0.4rem 0.8rem; text-align:center;">IPC 50</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--gd-border);">
+              <td style="padding:0.55rem 1rem; font-weight:600;">ImageIDC</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">74.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">79.8</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  border-right:2px solid var(--gd-border);">87.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">73.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">79.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">87.1</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--gd-border); background:#fafafa;">
+              <td style="padding:0.55rem 1rem; font-weight:600;">ImageNette</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">81.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">85.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  border-right:2px solid var(--gd-border);">91.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">83.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">87.3</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">92.7</td>
+            </tr>
+            <tr>
+              <td style="padding:0.55rem 1rem; font-weight:600;">ImageWoof</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">62.5</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;">73.1</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  border-right:2px solid var(--gd-border);">82.2</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">63.9</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">73.7</td>
+              <td style="padding:0.55rem 0.8rem; text-align:center;
+                  font-weight:700; color:var(--gd-primary);">82.4</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.78rem; color:var(--gd-text-muted); margin-top:0.4rem;">
+          ImageNette and ImageWoof show clear gains from
+          diffusion enhancement; ImageIDC is comparable due to lower-frequency visual composition.
+        </p>
+      </div>
 
-<!--BibTex citation -->
+      <div class="ablation-box">
+        <h4>Key Ablation Findings</h4>
+        <ul>
+          <li><strong>Coverage (&alpha;) dominates</strong> &mdash; the most important term in the SSDIM objective; setting &alpha;=1.0 alone achieves 78.2% on ImageWoof vs 74.6% random baseline.</li>
+          <li><strong>Diffusion enhancement adds +14.6 pp</strong> on ImageNet-1K (50.0% vs 35.4% bilinear), showing the value of recovering high-frequency spatial details.</li>
+          <li><strong>Semantic prompts help</strong> &mdash; adding action labels in UCF-101 (Grid-LDC-Labels) gives consistent gains across all 1/2/4/8-shot regimes.</li>
+        </ul>
+      </div>
+
+      <!-- Hyperparameters box — add after ablation-box div -->
+      <div style="background:#fff; border:1.5px solid var(--gd-border);
+          border-radius:10px; padding:1.5rem 1.8rem; margin-top:1.5rem;">
+        <h4 style="font-size:1.05rem; font-weight:700; color:var(--gd-primary); margin-bottom:0.8rem;">
+          Hyperparameters (fixed across all datasets)
+        </h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+            gap:0.8rem; text-align:center;">
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">&alpha; = 1.0</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Coverage weight</div>
+          </div>
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">&beta; = 0.6</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Diversity weight</div>
+          </div>
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">&gamma; = 0.3</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Spectral weight</div>
+          </div>
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">L = 4</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Grid size (4&times;4)</div>
+          </div>
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">p = 0.6</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Aligned crop prob.</div>
+          </div>
+          <div style="background:var(--gd-accent-light); border-radius:8px; padding:0.8rem;">
+            <div style="font-size:1.3rem; font-weight:800; color:var(--gd-primary);">r = 32</div>
+            <div style="font-size:0.78rem; color:var(--gd-text-muted);">Spectral rank</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ LIMITATIONS ═══════════════ -->
+  <section class="section" id="limitations">
+    <div class="container is-max-desktop">
+      <h2 class="gd-section-title">Limitations &amp; Broader Impact</h2>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-top:0.5rem;">
+
+        <div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.8rem;">
+            <i class="fas fa-exclamation-triangle"
+              style="color:#e67e22; margin-right:0.4rem;"></i>Limitations
+          </h4>
+          <ul style="font-size:0.92rem; color:var(--gd-text-muted);
+              line-height:1.8; padding-left:1.2rem; margin:0;">
+            <li>SSDIM requires a pretrained CLIP encoder — performance may degrade on
+                highly domain-specific datasets where CLIP embeddings are less informative.</li>
+            <li>The single-step diffusion enhancement adds a one-time preprocessing cost
+                (~918ms per image on A6000) that may be prohibitive at very large scales.</li>
+            <li>Grid size is fixed at L=4 — optimal grid size may vary across datasets
+                with different intra-class diversity characteristics.</li>
+            <li>Current evaluation focuses on image classification and action recognition;
+                generalization to detection or segmentation tasks remains unexplored.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--gd-primary);
+              margin-bottom:0.8rem;">
+            <i class="fas fa-globe"
+              style="color:var(--gd-accent); margin-right:0.4rem;"></i>Broader Impact
+          </h4>
+          <ul style="font-size:0.92rem; color:var(--gd-text-muted);
+              line-height:1.8; padding-left:1.2rem; margin:0;">
+            <li><strong style="color:var(--gd-text);">Efficiency:</strong> Compact distilled
+                datasets reduce storage, compute, and energy costs for model training —
+                supporting sustainable AI development.</li>
+            <li><strong style="color:var(--gd-text);">Privacy:</strong> Distilled surrogates
+                enable model training without direct access to raw data, benefiting
+                privacy-sensitive domains like healthcare.</li>
+            <li><strong style="color:var(--gd-text);">Accessibility:</strong> Lower data
+                requirements democratize model training for researchers without large
+                compute budgets.</li>
+            <li><strong style="color:var(--gd-text);">Risk:</strong> As with all dataset
+                compression methods, distilled data may inherit or amplify biases present
+                in the original dataset.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ═══════════════ VIDEO ═══════════════ -->
+  <section class="section" id="video">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="gd-section-title">Video</h2>
+      <video controls class="gd-video">
+        <source src="static/videos/demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- ═══════════════ POSTER ═══════════════ -->
+  <section class="section hero is-light" id="poster">
+    <div class="container is-max-desktop has-text-centered">
+      <h2 class="gd-section-title">Poster</h2>
+      <div class="poster-preview">
+        <a href="static/pdfs/poster.pdf" target="_blank">
+          <img src="static/images/poster_thumb.png"
+               alt="Grid Distillation CVPR 2026 Poster Preview">
+        </a>
+      </div>
+      <div style="margin-top:1.2rem;">
+        <a href="static/pdfs/poster.pdf" target="_blank"
+           class="external-link button is-normal is-rounded is-dark">
+          <span class="icon"><i class="fas fa-download"></i></span>
+          <span>Download Poster (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ BIBTEX ═══════════════ -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
+        <h2 class="gd-section-title">BibTeX</h2>
         <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
           <i class="fas fa-copy"></i>
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@inproceedings{das2026griddistillation,
+  title     = {Grid Distillation: Compositional Image Distillation
+               via Structured Generative Grids},
+  author    = {Das, Biplab Ch and Das, Shouvik and
+               Gopalakrishnan, Viswanath},
+  booktitle = {Proceedings of the IEEE/CVF Conference on
+               Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2026}
 }</code></pre>
     </div>
-</section>
-<!--End BibTex citation -->
+  </section>
 
+  </main>
 
+  <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content" style="text-align:center;">
+            <p>
+              <strong>Grid Distillation</strong> &middot; CVPR 2026 &middot;
+              Samsung R&amp;D Institute Bangalore &amp; IIIT Bangalore
+            </p>
+            <p style="font-size:0.88rem; margin-top:-0.5rem;">
+              Contact:
+              <a href="mailto:biplab.das@iiitb.ac.in">biplab.das@iiitb.ac.in</a> &middot;
+              <a href="mailto:shouvik.das@samsung.com">shouvik.das@samsung.com</a> &middot;
+              <a href="mailto:viswanath.g@iiitb.ac.in">viswanath.g@iiitb.ac.in</a>
+            </p>
+            <p style="font-size:0.82rem; color:#888; margin-top:0.5rem;">
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">
+                Academic Project Page Template</a> adopted from
+              <a href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+              Licensed under
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+                CC BY-SA 4.0</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
